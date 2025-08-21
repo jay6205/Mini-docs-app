@@ -1,12 +1,25 @@
-# React + Vite
+## Docs App
+A simple React + TailwindCSS project where users can add and display draggable document cards with details like description, file size, and tags.  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Add New Items
+- A form lets you create new items
 
-## Expanding the ESLint configuration
+Dynamic Card Rendering
+- Each item is displayed as a draggable card (`framer-motion` powered).
+- Tag colors adapt based on selection (e.g., green, sky).
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Interactive UI
+- Cards can be dragged around the screen.
+- “Add” button toggles a form for new items.
+- Cancel option available when adding items.
+
+---
+
+## What I Learned
+- Using **Framer Motion** for draggable components.
+
+This project was built just for practice and to explore **Framer Motion**.
