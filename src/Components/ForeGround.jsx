@@ -1,9 +1,10 @@
 import React, { useRef, useState } from "react";
 import Card from "./Card";
+import Add from "./Add";
 
 function ForeGround() {
   const fgRef = useRef(null);
-  const data = [
+  const [data, setData] = useState([
     {
       description: "Lorem ipsum dolor sit amet consectetur adipisicing.",
       fileSize: "0.9mb",
@@ -34,11 +35,16 @@ function ForeGround() {
         tagColor: "sky",
       },
     },
-  ];
+  ]);
+
   return (
-    <div ref={fgRef} className=" w-full h-full z-[3] fixed top-0 left-0 flex gap-10 flex-wrap p-5">
+    <div
+      ref={fgRef}
+      className=" w-full h-full z-[3] fixed top-0 left-0 flex gap-15 flex-wrap p-5"
+    >
+      <Add setData={setData} />
       {data.map((item, index) => (
-        <Card data={item} reference={fgRef} />
+        <Card key={index} data={item} reference={fgRef} />
       ))}
     </div>
   );
